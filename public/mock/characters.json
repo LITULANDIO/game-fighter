@@ -1,0 +1,28 @@
+{
+  "maxPoints": 30,
+  "minPointsByStat": 1,
+  "maxPointsByStat": 10,
+  "characters": [
+    {
+      "name": "Tank",
+      "stats": [
+        { "name": "STR", "value": 3 },
+        { "name": "STR", "value": 3 }
+      ]
+    },
+    {
+      "name": "Assasin",
+      "stats": [
+        { "name": "STR", "value": 3 },
+        { "name": "STR", "value": 3 }
+      ]
+    },
+    {
+      "name": "Sorcerer",
+      "stats": [
+        { "name": "STR", "value": 3 },
+        { "name": "STR", "value": 3 }
+      ]
+    }
+  ]
+}
