@@ -1,4 +1,4 @@
-<div>
-    {{ character.name }}
-    <img :src="character.img" :alt="character.name" />
-</div>
+    <section class="character" @click="onClicked">
+        <div><img :src="character.img" :alt="character.name"/></div>
+        <p>{{ character.name }}</p>
+    </section>

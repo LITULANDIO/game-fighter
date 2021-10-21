@@ -1,0 +1,27 @@
+.character{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: 0 0 0px #a5c7, 0 0 5px #a5c7, 0 0 21px #a5c7;    
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 0px #a945c7, 0 0 5px #a945c7, 0 0 21px #a945c7;    
+        p{
+            border: 2px dotted #a945c7;
+        }
+    }
+    img{
+        max-height: 240px;
+        min-height: 240px;;
+        min-width: 240px;
+        max-width: 240px;
+    }
+    p{
+        width: 100%;
+        border: 2px dotted #a5c7;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        
+    }
+}

@@ -10,6 +10,15 @@ export default defineComponent({
       type: Object,
       required: true
     }
+  },
+  setup(props, { emit }) {
+    const onClicked = () => {
+      emit('onClicked', props.character);
+    };
+
+    return {
+      onClicked
+    };
   }
 });
 </script>

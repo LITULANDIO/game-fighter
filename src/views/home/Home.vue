@@ -1,13 +1,21 @@
 <template>
-  <div v-for="player in players" :key="player">
-    <Character v-for="character in player.characters" :key="character.name" :character="character" />
-  </div>
+  <section>
+    <div v-for="player in players" :key="player">
+      <Character
+        v-for="character in player.characters"
+        :key="character.name"
+        :character="character"
+        @onClicked="onSelectCharacter"
+      />
+    </div>
+  </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import Character from '@/components/character/Character.vue'; // @ is an alias to /src
 import game from '@/modules/game/game';
+import { Character as Player } from '@/modules/game/type';
 
 export default defineComponent({
   name: 'Home',
@@ -23,13 +31,26 @@ export default defineComponent({
       console.log(players.value);
     };
 
+    const onSelectCharacter = (character: Player): void => {
+      console.log(character);
+    };
+
     onMounted(() => {
       getPlayers();
     });
 
     return {
-      players
+      players,
+      onSelectCharacter
     };
   }
 });
 </script>
+
+<style lang="scss" scoped>
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+</style>
