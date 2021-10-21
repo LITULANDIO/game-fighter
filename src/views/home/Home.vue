@@ -51,6 +51,8 @@ export default defineComponent({
 section {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 15px;
 }
 </style>
