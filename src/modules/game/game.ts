@@ -7,7 +7,7 @@ export default () => {
     try {
       const options: any = {
         method: 'GET',
-        url: '/mock/characters.json'
+        url: 'https://fighters-api.herokuapp.com/fighters'
       };
 
       if (options) {
@@ -18,7 +18,11 @@ export default () => {
       console.error(err);
     }
   };
-
+  const imgGame: any = {
+    Tank: require('@/assets/tank.png'),
+    Assassin: require('@/assets/assasin.png'),
+    Knight: require('@/assets/sorcerer.png')
+  };
   // parseamos y creamos un nuevo objeto para añadirle una imagen al personaje
   const getCharacterWithImg = async () => {
     const game: Game = await getGame();
@@ -34,12 +38,7 @@ export default () => {
         characters: [
           {
             name: player.name,
-            img:
-              player.name === 'Tank'
-                ? require('@/assets/tank.png')
-                : player.name === 'Assasin'
-                ? require('@/assets/assasin.png')
-                : require('@/assets/sorcerer.png'),
+            img: imgGame[player.name],
             stats: []
           }
         ]

@@ -6,7 +6,7 @@ export type Game = {
 };
 
 export type Character = {
-  name: unknown | string;
+  name: string;
   img?: unknown | string;
   stats: Stat[];
 };
